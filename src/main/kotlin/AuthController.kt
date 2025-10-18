@@ -11,6 +11,7 @@ object AuthController {
     private const val DB_PASSWORD = "SuperSecret123!"
     private const val AWS_SECRET = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
     private const val JWT_SECRET = "my-super-secret-jwt-key-123456"
+    private const val STRIPE_KEY = "sk_live_51234567890ABCDEFGHIJKLMNOP"
     private const val PRIVATE_KEY = "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQ..."
 
     private val users = mutableMapOf(
@@ -64,6 +65,7 @@ object AuthController {
                     API Key: $API_KEY
                     DB Password: $DB_PASSWORD
                     AWS Secret: $AWS_SECRET
+                    Stripe Key: $STRIPE_KEY
                     Role: ${if(username == "admin") "admin" else "user"}
                     Session: $sessionId
                     MD5 Hash: $hashedPassword

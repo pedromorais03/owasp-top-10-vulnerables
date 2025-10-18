@@ -10,6 +10,13 @@ repositories {
     mavenCentral()
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    compilerOptions {
+        // Gera informações de debug no bytecode
+        freeCompilerArgs.add("-Xdebug")
+    }
+}
+
 dependencies {
     implementation(kotlin("stdlib"))
 }
